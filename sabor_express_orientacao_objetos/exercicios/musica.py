@@ -1,26 +1,25 @@
 class Musica:
-    nome = ''
-    artista = ''
-    duracao = float
+    musicas = []
 
-musica1 = Musica()
-musica1.nome = 'Bohemian Rhapsody'
-musica1.artista = 'Queen'
-musica1.duracao = 3.55
+    def __init__(self, nome='', artista='', duracao=0.00):
+        self.nome = nome
+        self.artista = artista
+        self.duracao = duracao
 
-musica2 = Musica()
-musica2.nome = 'Imagine'
-musica2.artista = 'John Lennon'
-musica2.duracao = 1.83
+        Musica.musicas.append(self)
 
-musica3 = Musica()
-musica3.nome = 'Shape of You'
-musica3.artista = 'Ed Sheeran'
-musica3.duracao = 2.34
+    def __str__(self):
+        return f'{self.nome} | {self.artista} | {self.duracao}'
+    
+    def listar_musicas():
+        for musica in Musica.musicas:
+            print(f'{musica.nome} | {musica.artista} | {musica.duracao}')
 
-musica_nova = Musica()
-musica_nova.nome = 'Chá com bolacha'
-musica_nova.artista = 'Café da tarde'
-musica_nova.duracao = 3.36
+musica1 = Musica('Bohemian Rhapsody', 'Queen', 3.55)
+musica2 = Musica('Imagine', 'John Lennon', 1.83)
+musica3 = Musica('Shape of You', 'Ed Sheeran', 2.34)
 
-print(f'{dir(musica_nova)})\n{vars(musica_nova)}')
+#print(f'{dir(musica_nova)})\n{vars(musica_nova)}')
+#print(musica1)
+#print()
+Musica.listar_musicas()

@@ -2,8 +2,7 @@
 from ..modelos.restaurante import Restaurante
 
 #Cria a instância da classe restaurante
-restaurante_praca = Restaurante()
-restaurante_praca.nome = 'Praça'
+restaurante_praca = Restaurante('Praça', 'Brasileira')
 
 #1 - Atribua o valor 'Italiana' ao atributo categoria da instância restaurante_praca da classe Restaurante.
 restaurante_praca.categoria = 'Italiana'
@@ -24,10 +23,7 @@ categoria = restaurante_praca.categoria
 restaurante_praca.nome = 'Bistrõ'
 
 #6 - Crie uma nova instância da classe Restaurante chamada restaurante_pizza com o nome 'Pizza Place' e categoria 'Fast Food'.
-restaurante_pizza = Restaurante()
-
-restaurante_pizza.nome = 'Pizza Place'
-restaurante_pizza.categoria = 'Fast Food'
+restaurante_pizza = Restaurante('Pizza Place', 'Fast Food')
 
 #7 - Verifique se a categoria da instância restaurante_pizza é 'Fast Food'.
 if restaurante_pizza.categoria == 'Fast Food':
